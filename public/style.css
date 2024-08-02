@@ -374,6 +374,8 @@ nav {
 
   .header__content :is(h1, p, .bar) {
     text-align: left;
+    position: relative;
+    margin-top: 100px;
   }
 }
 
