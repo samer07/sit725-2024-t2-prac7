@@ -1,0 +1,107 @@
+/* Add this to your existing CSS */
+
+.destination-form {
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 600px;
+    background-color: var(--white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.destination-form h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: var(--text-dark);
+}
+
+.destination-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.destination-form input, .destination-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.destination-form button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.destination-form button:hover {
+    background-color: var(--primary-color-dark);
+}
+
+/* Container for horizontal stacking of cards */
+.destination-list {
+    display: flex; /* Align children in a row */
+    overflow-x: auto; /* Allow horizontal scrolling if necessary */
+    gap: 1.5rem; /* Space between cards */
+    padding: 1rem; /* Padding around cards */
+    flex-wrap: nowrap; /* Prevent wrapping to the next line */
+    justify-content: flex-start; /* Align items to the start of the container */
+}
+
+/* Card styles */
+.destination-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 0; /* Remove margins to avoid extra spacing */
+    flex: 0 0 auto; /* Prevent cards from stretching or shrinking */
+}
+
+.destination-card img {
+    width: 100%; /* Full width of the card */
+    height: 200px; /* Fixed height for the image */
+    object-fit: cover; /* Cover the card area */
+}
+
+.destination-card-content {
+    padding: 1rem;
+    text-align: center; /* Center text inside the card */
+}
+
+.destination-card-content h3 {
+    margin: 1rem 0;
+    font-size: 1.5rem; /* Increase font size */
+    color: var(--text-dark);
+}
+
+.destination-card-content p {
+    font-size: 1rem; /* Adjust font size for description */
+    color: var(--text-light);
+}
+
+.destination-card-content button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.destination-card-content button:hover {
+    background-color: var(--primary-color-dark);
+}

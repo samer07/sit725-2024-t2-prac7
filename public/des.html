@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link type="text/css" rel="stylesheet" href="des.css">
+    <title>Destination - Travel Nepal</title>
+</head>
+<body>
+    <nav>
+        <div class="nav__header">
+            <div class="nav__logo">
+                <a href="#">Travel<span>Nepal</span></a>
+            </div>
+            <div class="nav__menu__btn" id="menu-btn">
+                <span><i class="ri-menu-line"></i></span>
+            </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="des.html">Destination</a></li>
+            <li><a href="#">Package</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="destination-form">
+            <h2>Add New Destination</h2>
+            <form id="destination-form" enctype="multipart/form-data">
+                <input type="hidden" id="destination-id">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="description">Description:</label>
+                <textarea id="description" rows="4" required></textarea>
+                <label for="image">Image:</label>
+                <input type="file" id="image" accept="image/*">
+                <button type="submit">Save Destination</button>
+            </form>
+        </section>
+        <h2>Destinations</h2>
+        <section class="destination-list">
+            <div id="destination-cards"></div>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script type="text/javascript" src="des.js"></script>
+</body>
+</html>

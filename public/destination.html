@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="destination_style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Destination - Travel Nepal</title>
+  </head>
+  <body>
+    <nav>
+        <div class="nav__header">
+          <div class="nav__logo">
+            <a href="#">Travel<span>Nepal</span></a>
+          </div>
+          <div class="nav__menu__btn" id="menu-btn">
+            <span><i class="ri-menu-line"></i></span>
+          </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destination.html">Destination</a></li>
+          <li><a href="#">Package</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <!-- <div class="nav__btns">
+          <button class="btn sign__up">Sign Up</button>
+          <button class="btn sign__in">Sign In</button>
+        </div> -->
+      </nav>
+
+    <main class="destination-container">
+      <section class="destination-list">
+        <h2>Destinations</h2>
+        <ul id="destinations">
+          <!-- Destination items will be populated here -->
+        </ul>
+      </section>
+
+      <section class="destination-form">
+        <h2>Add New Destination</h2>
+        <form id="addDestinationForm">
+          <div class="form-group">
+            <label for="name">Destination Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="description">Description</label>
+            <textarea id="description" name="description" required></textarea>
+          </div>
+          <button type="submit">Add Destination</button>
+        </form>
+      </section>
+
+      <section class="destination-form" id="editDestinationSection" style="display: none;">
+        <h2>Edit Destination</h2>
+        <form id="editDestinationForm">
+          <input type="hidden" id="edit-id" name="id" />
+          <div class="form-group">
+            <label for="edit-name">Destination Name</label>
+            <input type="text" id="edit-name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="edit-description">Description</label>
+            <textarea id="edit-description" name="description" required></textarea>
+          </div>
+          <button type="submit">Update Destination</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="destination.js"></script>
+  </body>
+</html>

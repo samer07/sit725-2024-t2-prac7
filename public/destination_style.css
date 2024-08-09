@@ -1,0 +1,133 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+  }
+  
+  nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav__header .nav__logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+  }
+  
+  .nav__links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav__links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .nav__links a:hover {
+    color: #ffcc00;
+  }
+  
+  .main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    margin-top: 0;
+  }
+  
+  .destination-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .destination-list {
+    flex: 2;
+  }
+  
+  .destination-form {
+    flex: 1;
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  ul#destinations {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul#destinations li {
+    background-color: #e0f7fa;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  ul#destinations li button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  ul#destinations li button.edit {
+    background-color: #ffa726;
+  }
+  
+  ul#destinations li button:hover {
+    background-color: #d32f2f;
+  }
+  
+  form .form-group {
+    margin-bottom: 15px;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  form input[type='text'],
+  form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  form button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  form button:hover {
+    background-color: #45a049;
+  }
+  
