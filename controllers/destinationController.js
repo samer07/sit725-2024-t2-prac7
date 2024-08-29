@@ -8,9 +8,12 @@ exports.getDestinations = async (req, res) => {
         const destinations = await Destination.find();
         res.json(destinations);
     } catch (error) {
+        console.error('Error fetching destinations:', error.message);  // Log error message
+        console.error('Stack trace:', error.stack);  // Log stack trace
         res.status(500).json({ message: error.message });
     }
 };
+
 
 // Create a new destination
 exports.createDestination = async (req, res) => {
