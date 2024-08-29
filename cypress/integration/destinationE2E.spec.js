@@ -2,12 +2,12 @@
 
 describe('Destination Management', () => {
     it('should display the list of destinations', () => {
-        cy.visit('http://localhost:8080');  // Replace with your local server URL
+        cy.visit('http://localhost:3000');  
         cy.get('.destination-card').should('have.length.greaterThan', 0);
     });
 
     it('should allow adding a new destination', () => {
-        cy.visit('http://localhost:8080');
+        cy.visit('http://localhost:3000');
         cy.get('#name').type('Lumbini');
         cy.get('#description').type('Birthplace of Buddha');
         cy.get('#destination-form').submit();
@@ -16,7 +16,7 @@ describe('Destination Management', () => {
     });
 
     it('should allow editing a destination', () => {
-        cy.visit('http://localhost:8080');
+        cy.visit('http://localhost:3000');
         cy.get('.destination-card').first().contains('Edit').click();
 
         cy.get('#name').clear().type('Kathmandu Updated');
@@ -26,7 +26,7 @@ describe('Destination Management', () => {
     });
 
     it('should allow deleting a destination', () => {
-        cy.visit('http://localhost:8080');
+        cy.visit('http://localhost:3000');
         cy.get('.destination-card').first().contains('Delete').click();
 
         cy.get('.destination-card').should('have.length.lessThan', 1);

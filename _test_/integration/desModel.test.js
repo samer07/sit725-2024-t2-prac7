@@ -1,6 +1,6 @@
 // tests/integration/desModel.test.js
 
-import { fetchDestinations, createDestination, deleteDestination } from '../../desModel.js';
+import { fetchDestinations, createDestination, deleteDestination } from '../../views/desModel';
 
 describe('Destination API Integration Test', () => {
     it('should fetch destinations', async () => {

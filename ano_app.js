@@ -96,7 +96,7 @@ app.delete('/api/destinations/:id', async (req, res) => {
 // Log result of addTwoNumber (existing functionality)
 console.log(addTwoNumber(19, 12));
 
-const port = 8080;
+const port = 3000;
 app.listen(port, () => {
     console.log("Server is running on http://localhost:" + port);
 });

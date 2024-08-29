@@ -1,6 +1,6 @@
 // tests/unit/model.test.js
 
-import { getDestinations, addDestination, updateDestination, deleteDestination } from '../../model.js';
+import { getDestinations, addDestination, updateDestination, deleteDestination } from '../../views/model';
 
 describe('Model Functions', () => {
     beforeEach(() => {
