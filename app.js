@@ -1,8 +1,9 @@
-// app.js
-
 const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
+const http = require('http');
+const socketIO = require('socket.io');
+
 const app = express();
 
 // Connect to MongoDB
@@ -25,7 +26,39 @@ app.use('/api/home', homeRoutes);
 // Serve static files
 app.use(express.static(path.join(__dirname, 'views')));
 
+// Create the HTTP server and attach Socket.io
+const server = http.createServer(app);
+const io = socketIO(server);
+
+let connectedClients = 0;
+
+// Handle socket connections
+io.on('connection', (socket) => {
+    connectedClients++;
+    console.log('New client connected');
+    io.emit('clientCount', connectedClients); // Send client count to all clients
+
+    socket.on('addDestination', (newDestination) => {
+        io.emit('destinationAdded', newDestination);
+    });
+
+    socket.on('updateDestination', (updatedDestination) => {
+        io.emit('destinationUpdated', updatedDestination);
+    });
+
+    socket.on('deleteDestination', (deletedDestination) => {
+        io.emit('destinationDeleted', deletedDestination);
+    });
+
+    socket.on('disconnect', () => {
+        connectedClients--;
+        console.log('Client disconnected');
+        io.emit('clientCount', connectedClients); // Send updated client count to all clients
+    });
+});
+
+// Listen on a specific port
 const port = 3000;
-app.listen(port, () => {
+server.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
